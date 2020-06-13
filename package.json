@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc --watch & clasp push --watch"
+    "dev:gas": "tsc --project tsconfig.gas.json --watch",
+    "dev:push": "clasp push --watch",
+    "dev": "yarn dev:gas & yarn dev:push"
   },
   "devDependencies": {
     "@google/clasp": "^2.3.0",
