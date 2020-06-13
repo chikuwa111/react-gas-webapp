@@ -1,1 +1,5 @@
 /node_modules
+.clasp.json
+
+/build/**
+!/build/appsscript.json
