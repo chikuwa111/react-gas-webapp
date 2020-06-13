@@ -3,3 +3,6 @@
 
 /build/**
 !/build/appsscript.json
+!/build/client
+/build/client/**
+!/build/client/page.html
