@@ -3,3 +3,9 @@ const doGet = (e: GoogleAppsScript.Events.DoGet) =>
 
 const includeAsset_ = (filename: string) =>
   HtmlService.createHtmlOutputFromFile(filename).getContent();
+
+const echo = (text: string) => text;
+
+export type RPC = {
+  echo: typeof echo;
+};
