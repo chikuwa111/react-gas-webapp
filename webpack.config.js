@@ -1,5 +1,7 @@
 const path = require("path");
 
+const GasAssetWebpackPlugin = require("./gas-asset-webpack-plugin");
+
 /**
  * @type import('webpack').Configuration
  */
@@ -19,6 +21,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [new GasAssetWebpackPlugin()],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
