@@ -14,12 +14,14 @@ export declare const google: {
   };
 };
 
-export const echo = (
-  ...args: Parameters<RPC["echo"]>
-): Promise<ReturnType<RPC["echo"]>> =>
+export const callRPC = <T extends keyof RPC>(
+  rpcName: T,
+  ...args: Parameters<RPC[T]>
+): Promise<ReturnType<RPC[T]>> =>
   new Promise((resolve, reject) => {
     google.script.run
       .withFailureHandler(reject)
       .withSuccessHandler(resolve)
-      .echo(...args);
+      // @ts-ignore 推論できない
+      [rpcName](...args);
   });
