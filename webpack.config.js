@@ -8,7 +8,7 @@ const GasAssetWebpackPlugin = require("./gas-asset-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  entry: path.resolve(__dirname, "src", "client", "index.ts"),
+  entry: path.resolve(__dirname, "src", "client", "index.tsx"),
   output: {
     path: path.resolve(__dirname, "build", "client"),
     filename: "main.js.html",
