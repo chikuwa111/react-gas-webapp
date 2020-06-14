@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "dev:open": "yes | clasp open --webapp",
     "dev:gas": "tsc --project tsconfig.gas.json --watch",
     "dev:client": "webpack --watch",
     "dev:push": "clasp push --watch",
-    "dev": "yarn dev:gas & yarn dev:client & yarn dev:push"
+    "dev": "yarn dev:open && yarn dev:gas & yarn dev:client & yarn dev:push"
   },
   "devDependencies": {
     "@google/clasp": "^2.3.0",
