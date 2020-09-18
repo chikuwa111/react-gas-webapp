@@ -31,7 +31,8 @@
       "typescript": {}
     },
     "react": {
-      "version": "detect"
+      "version": "16.0",
+      "pragma": "h"
     }
   }
 }
