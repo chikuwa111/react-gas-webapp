@@ -1,4 +1,5 @@
-import React from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { h } from "preact";
 import { RPCTest } from "./RPCTest";
 
 export function App() {

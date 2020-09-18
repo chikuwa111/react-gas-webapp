@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { h } from "preact";
+import { useState, useEffect } from "preact/hooks";
 import { callRPC } from "../rpc";
 
 export function RPCTest() {
