@@ -1,6 +1,8 @@
-const doGet = (e: GoogleAppsScript.Events.DoGet) =>
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const doGet = () =>
   HtmlService.createTemplateFromFile("client/page").evaluate();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const includeAsset_ = (filename: string) =>
   HtmlService.createHtmlOutputFromFile(filename).getContent();
 

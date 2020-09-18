@@ -1,7 +1,8 @@
 import { RPC } from "../gas/code";
 
-type SuccessHandler = (value: any, obj?: Object) => void;
-type FailureHandler = (error: Error, obj?: Object) => void;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type SuccessHandler = (value: any, obj?: unknown) => void;
+type FailureHandler = (error: Error, obj?: unknown) => void;
 type GoogleScriptRun = RPC & {
   withSuccessHandler: (handler: SuccessHandler) => GoogleScriptRun;
   withFailureHandler: (handler: FailureHandler) => GoogleScriptRun;
@@ -21,6 +22,7 @@ export const callRPC = <T extends keyof RPC>(
     google.script.run
       .withFailureHandler(reject)
       .withSuccessHandler(resolve)
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore 推論できない
       [rpcName](...args);
   });
